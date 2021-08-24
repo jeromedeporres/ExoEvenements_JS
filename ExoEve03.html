@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExoEve03</title>
+</head>
+<body onload="init()">
+    <div style="text-align: center;">
+        <h1>Exo03-Permutation des Valeurs</h1>
+            <p>Mettez 2 texts differents dans les 2 zones de text puis cliquez sur le button</p>
+    </div>
+
+    <form name="form" id="monForm" style="text-align: center;">
+        <input type="text" name="Button1">
+        <input type="text" name="Button2"> 
+        <input type="button" value="Permuter" onClick="permuter()" >
+    </form>
+        <script type="text/javascript">
+
+ function init(){ //Pour le Btn1 est tojours le choix premiere.
+     document.form.Button1.focus();
+ }
+
+        function permuter(){
+            var permutation = document.form.Button1.value;
+            document.form.Button1.value = document.form.Button2.value;
+            document.form.Button2.value = permutation;
+         }
+        </script>
+</body>
+</html>
